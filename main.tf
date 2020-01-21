@@ -7,7 +7,7 @@ resource "aws_instance" "default"{
 	instance_type = "t2.micro"
 	key_name      = "MyKey"
 	
-	tags{
+	tags = {
 	Name = "MyFirstTerraIns"
 	}
 }
