@@ -44,7 +44,7 @@ agent any
     }
   }
 
-  if (env.BRANCH_NAME == 'master') {
+ 
 
     // Run terraform apply
      stage('apply') {
@@ -60,7 +60,7 @@ agent any
           }
         }
       }
-    }
+  
 
     // Run terraform show
     stage('show') {
@@ -78,7 +78,7 @@ agent any
       }
     }
   }
-  currentBuild.result = 'SUCCESS'
+
 }
 
 }
