@@ -47,6 +47,11 @@ agent any
   if (env.BRANCH_NAME == 'master') {
 
     // Run terraform apply
+    stage('Notify'{
+      steps{
+        slackSend color: '#BADA55', message: 'Hello We are starting with the built work'
+      }
+    }
     stage('apply') {
       steps {
         withCredentials([[
